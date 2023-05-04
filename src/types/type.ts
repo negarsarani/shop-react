@@ -7,16 +7,24 @@ export type Buttontype = {
 export interface InputType {
   type: string;
   style?: string;
-  name?:string
+  name?: string;
   // children: string | React.ReactNode;
 }
 
 export type Idata = {
-  id: string
-  name: string
-  price: string
-  image: string
-  inStock: number
-  ratings: number
-  fastDelivery: boolean
-}
+  id: string;
+  name: string;
+  price: string;
+  image: string;
+  inStock: number;
+  ratings: number;
+  fastDelivery: boolean;
+};
+export type CartContext = {
+  state: Idata[];
+  dispatch: any;
+};
+export type action = {
+  type: 'add';
+  payload: Idata;
+};

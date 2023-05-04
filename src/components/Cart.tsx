@@ -1,9 +1,9 @@
 import FixedRating from './FixedRating/FixedRating';
+import { useState } from 'react';
 
-const Cart = ({item}:any) => {
-  console.log(item);
-  
+const Cart = ({ item }: any) => {
   const { image, name, price, fastDelivery, ratings } = item;
+  const [add, setAdd] = useState(false);
   return (
     <>
       <div className="max-w-[220px] border rounded-md">
@@ -20,8 +20,19 @@ const Cart = ({item}:any) => {
             <FixedRating rating={ratings} />
           </div>
           <div>
-            <button className="rounded-md bg-[#007BFF] text-white px-3 py-2">
-              Add to Cart
+            <button
+              className={`rounded-md bg-[#007BFF] text-white px-3 py-2 ${
+                add ? ' bg-red-400' : ' bg-blue-600'
+              }`}
+              onClick={() => {
+                if (add) {
+                  setAdd(false);
+                } else {
+                  setAdd(true);
+                }
+              }}
+            >
+              {add ? 'Remove from cart' : ' Add to cart'}
             </button>
           </div>
         </div>
