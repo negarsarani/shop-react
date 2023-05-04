@@ -4,3 +4,9 @@ export type Buttontype = {
   style?: string;
   type?: string;
 };
+export interface InputType {
+  type: string;
+  style?: string;
+  name?:string
+  // children: string | React.ReactNode;
+}
