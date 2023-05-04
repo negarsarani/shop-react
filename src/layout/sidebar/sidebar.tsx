@@ -4,9 +4,9 @@ import Rating from '../../components/Rating/Rating';
 
 function Sidebar(props) {
   return (
-    <div className=" bg-violet-200 w-fit py-10 px-10 h-screen">
+    <div className=" bg-violet-200 w-fit py-10 px-10 h-screen flex flex-col gap-5">
       <h1>Filter Products</h1>
-      <div>
+      <div className='flex flex-col gap-2'>
         <div>
           <Input type="radio" name="filter" />
           <span>Ascending</span>
@@ -28,7 +28,7 @@ function Sidebar(props) {
           <Rating />
         </div>
       </div>
-      <Button style="bg-white text-black rounded-md">Clear Filters</Button>
+      <Button style="bg-white text-black p-2 rounded-md">Clear Filters</Button>
     </div>
   );
 }

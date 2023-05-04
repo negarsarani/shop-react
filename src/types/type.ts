@@ -10,3 +10,13 @@ export interface InputType {
   name?:string
   // children: string | React.ReactNode;
 }
+
+export type Idata = {
+  id: string
+  name: string
+  price: string
+  image: string
+  inStock: number
+  ratings: number
+  fastDelivery: boolean
+}
